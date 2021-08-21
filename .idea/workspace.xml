@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="0. Инструменты [#238814]">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job4j_design.iml" beforeDir="false" afterPath="$PROJECT_DIR$/job4j_design.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="Init maven" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +41,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629136518746</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Init maven">
+      <created>1629542894110</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629542894110</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Init maven">
+      <created>1629542955607</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629542955607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -62,6 +71,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0. Инструменты [#238814]" />
-    <option name="LAST_COMMIT_MESSAGE" value="0. Инструменты [#238814]" />
+    <MESSAGE value="Init maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init maven" />
   </component>
 </project>
