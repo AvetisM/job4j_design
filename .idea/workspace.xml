@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="Init maven" />
+    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="Init travis &amp; jacoco" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +55,28 @@
       <option name="project" value="LOCAL" />
       <updated>1629542955607</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Init travis &amp; jacoco">
+      <created>1629543431594</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629543431594</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Init travis &amp; jacoco">
+      <created>1629543462958</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629543462958</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Init travis &amp; jacoco">
+      <created>1629543852573</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629543852573</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -72,6 +93,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0. Инструменты [#238814]" />
     <MESSAGE value="Init maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init maven" />
+    <MESSAGE value="Init travis &amp; jacoco" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init travis &amp; jacoco" />
   </component>
 </project>
