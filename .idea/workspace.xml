@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="Init travis &amp; jacoco">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/Trigger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="Trigger codecov">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/job4j/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/job4j/AppTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -35,8 +37,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/checkstyle.xml" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.job4j" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="TriggerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -139,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629748844861</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Trigger codecov">
+      <created>1629749353154</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1629749353154</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +177,7 @@
     <MESSAGE value="0. Инструменты [#238814]" />
     <MESSAGE value="Init maven" />
     <MESSAGE value="Init travis &amp; jacoco" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init travis &amp; jacoco" />
+    <MESSAGE value="Trigger codecov" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trigger codecov" />
   </component>
 </project>
