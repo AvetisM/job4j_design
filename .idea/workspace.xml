@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="Trigger codecov">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/job4j/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/job4j/AppTest.class" afterDir="false" />
+    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="1. Что такое итератор. [#4951]">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/it/BackwardArrayIt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/job4j/it/BackwardArrayItTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ru/job4j/it/BackwardArrayIt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/ru/job4j/it/BackwardArrayItTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,28 +50,97 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.job4j.it" />
       <recent name="ru.job4j" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="TriggerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BackwardArrayItTest.whenReadSequence">
+    <configuration name="BackwardArrayItTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="job4j_design" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.job4j.*" />
+          <option name="PATTERN" value="ru.job4j.it.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.TriggerTest" />
+      <option name="PACKAGE_NAME" value="ru.job4j.it" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackwardArrayItTest.whenMultiCallhasNextThenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="job4j_design" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.it.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.it" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
+      <option name="METHOD_NAME" value="whenMultiCallhasNextThenTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackwardArrayItTest.whenMulticallNextThenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="job4j_design" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.it.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.it" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
+      <option name="METHOD_NAME" value="whenMulticallNextThenTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackwardArrayItTest.whenNextFromEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="job4j_design" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.it.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.it" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
+      <option name="METHOD_NAME" value="whenNextFromEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackwardArrayItTest.whenReadSequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="job4j_design" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.it.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.it" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
+      <option name="METHOD_NAME" value="whenReadSequence" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TriggerTest" />
+        <item itemvalue="JUnit.BackwardArrayItTest.whenReadSequence" />
+        <item itemvalue="JUnit.BackwardArrayItTest" />
+        <item itemvalue="JUnit.BackwardArrayItTest.whenMultiCallhasNextThenTrue" />
+        <item itemvalue="JUnit.BackwardArrayItTest.whenMulticallNextThenTrue" />
+        <item itemvalue="JUnit.BackwardArrayItTest.whenNextFromEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629749353154</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added markers">
+      <created>1629749833461</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1629749833461</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added markers">
+      <created>1629749900293</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1629749900293</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +264,19 @@
     <MESSAGE value="Init maven" />
     <MESSAGE value="Init travis &amp; jacoco" />
     <MESSAGE value="Trigger codecov" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trigger codecov" />
+    <MESSAGE value="Added markers" />
+    <MESSAGE value="1. Что такое итератор. [#4951]" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Что такое итератор. [#4951]" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/job4j/it/BackwardArrayIt.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
