@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="0. Инструменты [#238814 #192624]">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/it/MatrixIt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/job4j/it/MatrixItTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="5.1.1. Итератор для двухмерного массива int[][] [#9539]">
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/Trigger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/job4j/it/BackwardArrayIt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/job4j_design-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.job4j.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ru.job4j.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/TriggerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/job4j/it/BackwardArrayItTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629838546418</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="5.1.1. Итератор для двухмерного массива int[][] [#9539]">
+      <created>1630737570271</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1630737570272</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,22 +296,7 @@
     <MESSAGE value="Added markers" />
     <MESSAGE value="1. Что такое итератор. [#4951]" />
     <MESSAGE value="0. Инструменты [#238814 #192624]" />
-    <option name="LAST_COMMIT_MESSAGE" value="0. Инструменты [#238814 #192624]" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/job4j/it/MatrixIt.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/job4j/it/MatrixIt.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="5.1.1. Итератор для двухмерного массива int[][] [#9539]" />
+    <option name="LAST_COMMIT_MESSAGE" value="5.1.1. Итератор для двухмерного массива int[][] [#9539]" />
   </component>
 </project>
