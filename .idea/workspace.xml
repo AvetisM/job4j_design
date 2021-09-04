@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="1. Что такое итератор. [#4951]" />
+    <list default="true" id="7b8dd6ae-0b85-4a22-921f-7986537e0d37" name="Default Changelist" comment="0. Инструменты [#238814 #192624]">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/it/MatrixIt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/job4j/it/MatrixItTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,8 +51,8 @@
       <recent name="ru.job4j" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BackwardArrayItTest.whenReadSequence">
-    <configuration name="BackwardArrayItTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MatrixItTest">
+    <configuration name="MatrixItTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="job4j_design" />
       <extension name="coverage">
         <pattern>
@@ -57,13 +61,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.it" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.MatrixItTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackwardArrayItTest.whenMultiCallhasNextThenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatrixItTest.whenEmptyThenNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="job4j_design" />
       <extension name="coverage">
         <pattern>
@@ -72,14 +76,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.it" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
-      <option name="METHOD_NAME" value="whenMultiCallhasNextThenTrue" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.MatrixItTest" />
+      <option name="METHOD_NAME" value="whenEmptyThenNext" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackwardArrayItTest.whenMulticallNextThenTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatrixItTest.whenFewEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="job4j_design" />
       <extension name="coverage">
         <pattern>
@@ -88,14 +92,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.it" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
-      <option name="METHOD_NAME" value="whenMulticallNextThenTrue" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.MatrixItTest" />
+      <option name="METHOD_NAME" value="whenFewEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackwardArrayItTest.whenNextFromEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatrixItTest.whenNoElements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="job4j_design" />
       <extension name="coverage">
         <pattern>
@@ -104,14 +108,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.it" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
-      <option name="METHOD_NAME" value="whenNextFromEmpty" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.MatrixItTest" />
+      <option name="METHOD_NAME" value="whenNoElements" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackwardArrayItTest.whenReadSequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MatrixItTest.whenRowHasDiffSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="job4j_design" />
       <extension name="coverage">
         <pattern>
@@ -120,8 +124,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.it" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.BackwardArrayItTest" />
-      <option name="METHOD_NAME" value="whenReadSequence" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.it.MatrixItTest" />
+      <option name="METHOD_NAME" value="whenRowHasDiffSize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BackwardArrayItTest.whenReadSequence" />
-        <item itemvalue="JUnit.BackwardArrayItTest" />
-        <item itemvalue="JUnit.BackwardArrayItTest.whenMultiCallhasNextThenTrue" />
-        <item itemvalue="JUnit.BackwardArrayItTest.whenMulticallNextThenTrue" />
-        <item itemvalue="JUnit.BackwardArrayItTest.whenNextFromEmpty" />
+        <item itemvalue="JUnit.MatrixItTest" />
+        <item itemvalue="JUnit.MatrixItTest.whenFewEmpty" />
+        <item itemvalue="JUnit.MatrixItTest.whenRowHasDiffSize" />
+        <item itemvalue="JUnit.MatrixItTest.whenNoElements" />
+        <item itemvalue="JUnit.MatrixItTest.whenEmptyThenNext" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629838181758</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="0. Инструменты [#238814 #192624]">
+      <created>1629838546418</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1629838546418</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +277,23 @@
     <MESSAGE value="Trigger codecov" />
     <MESSAGE value="Added markers" />
     <MESSAGE value="1. Что такое итератор. [#4951]" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Что такое итератор. [#4951]" />
+    <MESSAGE value="0. Инструменты [#238814 #192624]" />
+    <option name="LAST_COMMIT_MESSAGE" value="0. Инструменты [#238814 #192624]" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/job4j/it/MatrixIt.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/job4j/it/MatrixIt.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
