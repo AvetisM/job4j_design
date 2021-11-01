@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 
 public class SimpleArrayListTest {
 
-    List<Integer> list;
+    SimpleArrayList<Integer> list;
 
     @Before
     public void initData() {
@@ -22,7 +22,7 @@ public class SimpleArrayListTest {
         list.add(3);
     }
 
-  /*  @Test
+   @Test
     public void whenAddThenSizeIncrease() {
         Assert.assertEquals(3, list.size());
     }
@@ -124,5 +124,5 @@ public class SimpleArrayListTest {
         Iterator<Integer> iterator = list.iterator();
         list.add(0);
         iterator.next();
-    }*/
+    }
 }

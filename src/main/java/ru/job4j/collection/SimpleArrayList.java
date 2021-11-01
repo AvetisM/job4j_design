@@ -1,69 +1,96 @@
 package ru.job4j.collection;
 
-import ru.job4j.list.List;
-
-import java.util.Arrays;
-import java.util.Iterator;
+import java.util.*;
 
 public class SimpleArrayList<T> implements List<T> {
+
     private T[] container;
 
     private int size;
 
     private int modCount;
 
+    public SimpleArrayList(int capacity) {
+        this.container = (T[]) new Object[capacity];
+    }
+
     @Override
     public void add(T value) {
-        modCount++;
         if (size == container.length) {
             container = grow();
         }
         container[size] = value;
+        modCount++;
         size++;
     }
 
     @Override
     public T set(int index, T newValue) {
-        modCount++;
-        if (size == container.length) {
-            container = grow();
-        }
-        System.arraycopy(container, index,
-                container, index + 1,
-                size - index);
 
+        Objects.checkIndex(index, container.length);
+
+        T oldValue = container[index];
         container[index] = newValue;
-        size++;
-        return container[index];
+
+        modCount++;
+
+        return oldValue;
     }
 
     @Override
     public T remove(int index) {
-        return null;
+        Objects.checkIndex(index, container.length);
+
+        T removeElement = container[index];
+
+        System.arraycopy(container, index + 1,
+                container, index,
+                size - index - 1);
+
+        container[size - 1] = null;
+
+        modCount++;
+        size--;
+
+        return removeElement;
     }
 
     @Override
     public T get(int index) {
-        return null;
+        Objects.checkIndex(index, container.length);
+        return container[index];
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public Iterator iterator() {
+
         return new Iterator<T>() {
+
+            int expectedModCount = modCount;
+            int indexIt;
 
             @Override
             public boolean hasNext() {
-                return false;
+                return indexIt < size;
             }
 
             @Override
             public T next() {
-                return null;
+
+                if (expectedModCount != modCount) {
+                    throw new ConcurrentModificationException();
+                }
+
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+
+                return container[indexIt++];
             }
 
         };
