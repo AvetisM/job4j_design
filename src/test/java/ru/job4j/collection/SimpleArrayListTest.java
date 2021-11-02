@@ -6,13 +6,12 @@ import org.junit.Test;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.IntStream;
 
 public class SimpleArrayListTest {
 
-    SimpleArrayList<Integer> list;
+    List<Integer> list;
 
     @Before
     public void initData() {
