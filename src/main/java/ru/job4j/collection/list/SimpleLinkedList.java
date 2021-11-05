@@ -15,12 +15,12 @@ public class SimpleLinkedList<E> implements List<E> {
     @Override
     public void add(E value) {
 
-        Node<E> f = first;
-        Node<E> newNode = new Node<>(f, value, null);
-        if (f == null) {
+        Node<E> currentNode = first;
+        Node<E> newNode = new Node<>(currentNode, value, null);
+        if (currentNode == null) {
             first = newNode;
         } else {
-            f.next = newNode;
+            currentNode.next = newNode;
         }
         size++;
         modCount++;
@@ -29,11 +29,11 @@ public class SimpleLinkedList<E> implements List<E> {
     @Override
     public E get(int index) {
         Objects.checkIndex(index, size);
-        Node<E> x = first;
+        Node<E> currentNode = first;
         for (int i = 0; i < index; i++) {
-            x = x.next;
+            currentNode = currentNode.next;
         }
-        return x.item;
+        return currentNode.item;
     }
 
     @Override
@@ -61,14 +61,15 @@ public class SimpleLinkedList<E> implements List<E> {
                 }
 
                 indexIt++;
-
+                E currentValue;
                 if (currentNode == null) {
                     currentNode = first;
-                    return (E) first.item;
+                    currentValue = (E) first.item;
                 } else {
                     currentNode = currentNode.next;
-                    return currentNode.item;
+                    currentValue = currentNode.item;
                 }
+                return currentValue;
             }
         };
     }
