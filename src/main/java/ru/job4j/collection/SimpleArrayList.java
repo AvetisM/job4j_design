@@ -67,19 +67,6 @@ public class SimpleArrayList<T> implements List<T> {
     }
 
     @Override
-    public boolean contains(T value) {
-        boolean rls = false;
-        Iterator<Integer> it = this.iterator();
-        while (it.hasNext()) {
-            if (Objects.equals(it.next(), value)) {
-                rls = true;
-                break;
-            }
-        }
-        return rls;
-    }
-
-    @Override
     public Iterator iterator() {
 
         return new Iterator<T>() {

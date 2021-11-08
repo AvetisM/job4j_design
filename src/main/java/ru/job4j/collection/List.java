@@ -10,6 +10,4 @@ public interface List<T> extends Iterable {
     T get(int index);
 
     int size();
-
-    boolean contains(T value);
 }
