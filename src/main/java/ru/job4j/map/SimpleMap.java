@@ -1,7 +1,6 @@
 package ru.job4j.map;
 
 import java.util.ConcurrentModificationException;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -23,7 +22,7 @@ public class SimpleMap<K, V> implements Map<K, V> {
         if (currentValue == null) {
             int hash = hash(key.hashCode());
             int index = indexFor(hash);
-            table[index] = new MapEntry<>(key, value);
+            table[index] = new MapEntry(key, value);
             result = true;
             modCount++;
             count++;
@@ -57,14 +56,9 @@ public class SimpleMap<K, V> implements Map<K, V> {
     public V get(K key) {
         V result = null;
         int hash = hash(key.hashCode());
-        for (MapEntry<K, V> keySet : table) {
-            if (keySet != null) {
-                K currentKey = keySet.key;
-                int currentHash = hash(currentKey.hashCode());
-                if (hash == currentHash && key.equals(currentKey)) {
-                    result = keySet.value;
-                }
-            }
+        int index = indexFor(hash);
+        if (table[index] != null) {
+            result = table[index].value;
         }
         return result;
     }
@@ -72,53 +66,44 @@ public class SimpleMap<K, V> implements Map<K, V> {
     @Override
     public boolean remove(K key) {
         boolean result = false;
-        int hash = hash(key.hashCode());
-        for (MapEntry<K, V> keySet : table) {
-            if (keySet != null) {
-                K currentKey = keySet.key;
-                int currentHash = hash(currentKey.hashCode());
-                if (hash == currentHash && key.equals(currentKey)) {
-                    int index = indexFor(hash);
-                    table[index] = null;
-                    result = true;
-                    modCount++;
-                    count--;
-                    break;
-                }
-            }
+        if (get(key) != null) {
+            int hash = hash(key.hashCode());
+            int index = indexFor(hash);
+            table[index] = null;
+            modCount++;
+            count--;
+            result = true;
         }
         return result;
     }
 
     @Override
     public Iterator<K> iterator() {
+
         return new Iterator<K>() {
 
             MapEntry<K, V> next;
-            MapEntry<K, V> current;
             int expectedModCount = modCount;
-            int index;
+            int index = 0;
 
             @Override
             public boolean hasNext() {
-                return false;
+                return index < table.length;
             }
 
             @Override
             public K next() {
-
-                MapEntry<K, V>[] t;
-                MapEntry<K, V> e = next;
-
                 if (expectedModCount != modCount) {
                     throw new ConcurrentModificationException();
                 }
-
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
 
-                return e.key;
+                do {
+                    next = table[index++];
+                } while (next == null);
+                return next.key;
             }
         };
     }
