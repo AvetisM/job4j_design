@@ -3,8 +3,6 @@ package ru.job4j.map;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import ru.job4j.collection.List;
-import ru.job4j.collection.SimpleArrayList;
 
 import java.util.Iterator;
 

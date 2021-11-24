@@ -15,13 +15,13 @@ public class SimpleMap<K, V> implements Map<K, V> {
     @Override
     public boolean put(K key, V value) {
         boolean result = false;
-        if (count / table.length >= LOAD_FACTOR) {
+        int hash = hash(key.hashCode());
+        int index = indexFor(hash);
+        float loadFactor = (float) count / table.length;
+        if (loadFactor >= LOAD_FACTOR) {
             expand();
         }
-        V currentValue = get(key);
-        if (currentValue == null) {
-            int hash = hash(key.hashCode());
-            int index = indexFor(hash);
+        if (table[index] == null) {
             table[index] = new MapEntry(key, value);
             result = true;
             modCount++;
@@ -88,14 +88,14 @@ public class SimpleMap<K, V> implements Map<K, V> {
 
             @Override
             public boolean hasNext() {
-                return index < table.length;
+                if (expectedModCount != modCount) {
+                    throw new ConcurrentModificationException();
+                }
+                return count > 0 && index < table.length;
             }
 
             @Override
             public K next() {
-                if (expectedModCount != modCount) {
-                    throw new ConcurrentModificationException();
-                }
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
