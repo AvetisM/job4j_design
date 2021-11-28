@@ -21,13 +21,9 @@ public class SimpleTree<E> implements Tree<E> {
     }
 
     @Override
+
     public Optional<Node<E>> findBy(E value) {
-        Optional<Node<E>> rsl = Optional.empty();
-        Optional<Node> node = findByPredicate(s -> s.value.equals(value));
-        if (node.isPresent()) {
-            rsl = Optional.of(node.get());
-        }
-        return rsl;
+        return findByPredicate(e -> e.getValue().equals(value));
     }
 
     @Override
@@ -35,8 +31,8 @@ public class SimpleTree<E> implements Tree<E> {
         return findByPredicate(s -> s.children.size() > 2).isEmpty();
     }
 
-    private Optional<Node> findByPredicate(Predicate<Node<E>> condition) {
-        Optional<Node> rsl = Optional.empty();
+    private Optional<Node<E>> findByPredicate(Predicate<Node<E>> condition) {
+        Optional<Node<E>> rsl = Optional.empty();
         Queue<Node<E>> data = new LinkedList<>();
         data.offer(this.root);
         while (!data.isEmpty()) {
