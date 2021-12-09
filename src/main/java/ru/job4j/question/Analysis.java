@@ -18,17 +18,15 @@ public class Analysis {
         for (User user : current) {
             if (resultMap.containsKey(user)) {
                 boolean wasChanged = false;
-                for (Map.Entry<User, Integer> entrySet : resultMap.entrySet()) {
-                    User foundUser = entrySet.getKey();
-                    if (foundUser.equals(user) && foundUser.getName() != user.getName()) {
-                        resultMap.put(user, 2);
-                        wasChanged = true;
-                        break;
-                    }
+                User foundUser = previous.stream().filter(u -> u.equals(user)).findFirst().get();
+                if (user.equals(foundUser) && user.getName() != foundUser.getName()) {
+                    resultMap.put(user, 2);
+                    wasChanged = true;
                 }
                 if (!wasChanged) {
                     resultMap.put(user, 0);
                 }
+
             } else {
                 resultMap.put(user, 3);
             }
