@@ -26,7 +26,6 @@ public class Analysis {
                 if (!wasChanged) {
                     resultMap.put(user, 0);
                 }
-
             } else {
                 resultMap.put(user, 3);
             }
