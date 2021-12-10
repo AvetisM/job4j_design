@@ -2,6 +2,7 @@ package ru.job4j.question;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 public class Analysis {
@@ -19,7 +20,7 @@ public class Analysis {
             if (resultMap.containsKey(user)) {
                 boolean wasChanged = false;
                 User foundUser = previous.stream().filter(u -> u.equals(user)).findFirst().get();
-                if (user.equals(foundUser) && user.getName() != foundUser.getName()) {
+                if (user.equals(foundUser) && !Objects.equals(user.getName(), foundUser.getName())) {
                     resultMap.put(user, 2);
                     wasChanged = true;
                 }
