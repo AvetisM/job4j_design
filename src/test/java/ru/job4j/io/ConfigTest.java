@@ -29,5 +29,6 @@ public class ConfigTest {
     public void whenWrongPair() {
         String path = "./data/pair_wrong_pair.properties";
         Config config = new Config(path);
+        config.load();
     }
 }
