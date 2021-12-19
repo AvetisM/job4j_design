@@ -19,9 +19,9 @@ public class Config {
     public void load() {
         try (BufferedReader in = new BufferedReader(new FileReader(this.path))) {
             for (String line = in.readLine(); line != null; line = in.readLine()) {
-                if (!line.startsWith("#")) {
+                if (!line.startsWith("#") && line.contains("=")) {
                     String[] splitLines = line.split("=");
-                    if (splitLines.length >= 2) {
+                    if (splitLines.length == 2) {
                         if (splitLines[0].trim().isEmpty() || splitLines[1].trim().isEmpty()) {
                             throw new IllegalArgumentException("key or value is illegal");
                         }
@@ -29,7 +29,7 @@ public class Config {
                     }
                 }
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
