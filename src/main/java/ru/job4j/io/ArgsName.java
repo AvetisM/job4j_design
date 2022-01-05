@@ -15,18 +15,32 @@ public class ArgsName {
         }
     }
 
+    boolean checkParameters(String[] args) {
+        boolean rls = true;
+        for (String parameter : args) {
+            if (parameter.startsWith("-") && parameter.contains("=")) {
+                continue;
+            }
+            rls = false;
+            break;
+        }
+        return rls;
+    }
+
     private void parse(String[] args) {
+        if (args.length == 0) {
+            throw new IllegalArgumentException("Parameters are null. Usage java -jar pack.jar 'parameters'.");
+        }
+        boolean matchPattern = checkParameters(args);
+        if (!matchPattern) {
+            throw new IllegalArgumentException("One or more parameters do not match the pattern.");
+        }
         for (String parameter : args) {
             String[] argArray = parameter.split("=");
-            if (argArray.length == 2) {
-                String key = argArray[0];
-                if (key.startsWith("-")) {
-                    key = key.substring(1);
-                }
-                values.put(key, argArray[1]);
-            } else {
+            if (argArray.length != 2) {
                 throw new IllegalArgumentException("Pair 'key' = 'value' undefined");
             }
+            values.put(argArray[0].substring(1), argArray[1]);
         }
     }
 
