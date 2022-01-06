@@ -54,5 +54,6 @@ public class Zip {
         File outputDirectory = new File(output);
         List<Path> sources = Search.search(Path.of(directory), p -> !p.toFile().getName().endsWith(exclude));
         packFiles(sources, outputDirectory);
+
     }
 }
