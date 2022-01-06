@@ -9,8 +9,16 @@ import java.util.zip.ZipOutputStream;
 public class Zip {
 
     public static void packFiles(List<Path> sources, File target) {
-        for (Path path : sources) {
-            packSingleFile(path.toFile(), target);
+        try (ZipOutputStream zip = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(target)))) {
+            for (Path path : sources) {
+                File source = path.toFile();
+                zip.putNextEntry(new ZipEntry(source.getPath()));
+                try (BufferedInputStream out = new BufferedInputStream(new FileInputStream(source))) {
+                    zip.write(out.readAllBytes());
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -54,6 +62,5 @@ public class Zip {
         File outputDirectory = new File(output);
         List<Path> sources = Search.search(Path.of(directory), p -> !p.toFile().getName().endsWith(exclude));
         packFiles(sources, outputDirectory);
-
     }
 }
