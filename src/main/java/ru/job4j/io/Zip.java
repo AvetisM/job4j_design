@@ -42,14 +42,7 @@ public class Zip {
         return parameter;
     }
 
-    public static void main(String[] args) throws IOException {
-        if (args.length != 3) {
-            throw new IllegalArgumentException("Arguments are not defined.");
-        }
-        ArgsName argsName = ArgsName.of(args);
-        String directory = parameterExist(argsName, "d");
-        String exclude = parameterExist(argsName, "e");
-        String output = parameterExist(argsName, "o");
+    private static void checkDirectory(String directory) {
         File fileDirectory = new File(directory);
         if (!fileDirectory.exists()) {
             throw new IllegalArgumentException(
@@ -59,6 +52,17 @@ public class Zip {
             throw new IllegalArgumentException(
                     String.format("The path %s specified in the parameter 'directory' is not a directory", directory));
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+        if (args.length != 3) {
+            throw new IllegalArgumentException("Arguments are not defined.");
+        }
+        ArgsName argsName = ArgsName.of(args);
+        String directory = parameterExist(argsName, "d");
+        String exclude = parameterExist(argsName, "e");
+        String output = parameterExist(argsName, "o");
+        checkDirectory(directory);
         File outputDirectory = new File(output);
         List<Path> sources = Search.search(Path.of(directory), p -> !p.toFile().getName().endsWith(exclude));
         packFiles(sources, outputDirectory);
