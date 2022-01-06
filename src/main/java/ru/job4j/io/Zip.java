@@ -8,9 +8,9 @@ import java.util.zip.ZipOutputStream;
 
 public class Zip {
 
-    public static void packFiles(List<Path> sources, Path target) {
+    public static void packFiles(List<Path> sources, File target) {
         for (Path path : sources) {
-            packSingleFile(path.toFile(), target.toFile());
+            packSingleFile(path.toFile(), target);
         }
     }
 
@@ -51,7 +51,8 @@ public class Zip {
             throw new IllegalArgumentException(
                     String.format("The path %s specified in the parameter 'directory' is not a directory", directory));
         }
+        File outputDirectory = new File(output);
         List<Path> sources = Search.search(Path.of(directory), p -> !p.toFile().getName().endsWith(exclude));
-        packFiles(sources, Path.of(output));
+        packFiles(sources, outputDirectory);
     }
 }
