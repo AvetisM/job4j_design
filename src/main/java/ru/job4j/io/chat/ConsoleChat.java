@@ -27,19 +27,19 @@ public class ConsoleChat {
         System.out.println("Привет. Я чат-бот. Спроси меня о чем-нибудь.");
         do {
             inUser = scanner.nextLine();
-            if (inUser.equals(STOP) || inUser.equals(OUT)) {
+            if (STOP.equals(inUser) || OUT.equals(inUser)) {
                 stopUser = STOP;
-            } else if (inUser.equals(CONTINUE)) {
+            } else if (CONTINUE.equals(inUser)) {
                 stopUser = "";
             }
             log.add(inUser);
-            if (!stopUser.equals(STOP)) {
+            if (!STOP.equals(stopUser)) {
                 int index = (int) (Math.random() * answers.size());
                 String answer = answers.get(index);
                 log.add(answer);
                 System.out.println(answer);
             }
-        } while (!inUser.equals(OUT));
+        } while (!OUT.equals(inUser));
         saveLog(log);
     }
 
