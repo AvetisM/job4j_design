@@ -11,7 +11,7 @@ import java.util.StringJoiner;
 
 public class CSVReader {
 
-    private static String getArgument(ArgsName argsName, String parameterName) {
+    private String getArgument(ArgsName argsName, String parameterName) {
         String parameter = argsName.get(parameterName);
         if (parameter == null) {
             throw new IllegalArgumentException(
@@ -20,11 +20,11 @@ public class CSVReader {
         return parameter;
     }
 
-    public static void printResult(List<String> data) throws Exception {
+    private void printResult(List<String> data) throws Exception {
         data.forEach(System.out::println);
     }
 
-    public static void saveResult(List<String> data, String file) throws Exception {
+    private void saveResult(List<String> data, String file) throws Exception {
         try (PrintWriter out = new PrintWriter(
                 new BufferedOutputStream(
                         new FileOutputStream(file)))) {
@@ -37,11 +37,11 @@ public class CSVReader {
     public static void handle(ArgsName argsName) throws Exception {
         List<Integer> filterValues = new ArrayList<>();
         List<String> data = new ArrayList<>();
-        String path = getArgument(argsName, "path");
-        String delimiter = getArgument(argsName, "delimiter");
-        String out = getArgument(argsName, "out");
-        String filter = getArgument(argsName, "filter");
-
+        CSVReader csvReader = new CSVReader();
+        String path = csvReader.getArgument(argsName, "path");
+        String delimiter = csvReader.getArgument(argsName, "delimiter");
+        String out = csvReader.getArgument(argsName, "out");
+        String filter = csvReader.getArgument(argsName, "filter");
         try (var scanner = new Scanner(new File(path))) {
             if (scanner.hasNext()) {
                 String[] values = scanner.nextLine().split(delimiter);
@@ -65,9 +65,9 @@ public class CSVReader {
             }
         }
         if ("stdout".equals(out)) {
-            printResult(data);
+            csvReader.printResult(data);
         } else {
-            saveResult(data, out);
+            csvReader.saveResult(data, out);
         }
     }
 
