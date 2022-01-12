@@ -17,13 +17,15 @@ public class UsageLog4j {
         short group = 1123;
         byte children = 2;
         boolean married = true;
+        long rate = 65L;
 
-        LOG.debug("User info name : {}, age : {}, grade : {}, gradePrs : {}, salary : {}, group : {}, married : {}, children : {}",
+        LOG.debug("User info name : {}, age : {}, grade : {}, gradePrs : {}, salary : {}, rate : {}, group : {}, married : {}, children : {}",
                 name,
                 age,
                 grade,
                 gradePrs,
                 salary,
+                rate,
                 group,
                 married,
                 children);
