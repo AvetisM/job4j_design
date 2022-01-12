@@ -24,11 +24,11 @@ public class EchoServer {
                     String msgHello = "";
                     String msgOther = "";
                     for (String str = in.readLine(); str != null && !str.isEmpty(); str = in.readLine()) {
-                        if (str.contains("Exit")) {
+                        if (str.contains("?msg=Exit")) {
                             close = true;
-                        } else if (str.contains("Hello")) {
+                        } else if (str.contains("?msg=Hello")) {
                             msgHello = "Hello";
-                        } else if (!str.contains("Hello") && !str.contains("Exit")) {
+                        } else if (!str.contains("?msg=Hello") && !str.contains("?msg=Exit")) {
                             msgOther = "What";
                         }
                         System.out.println(str);
