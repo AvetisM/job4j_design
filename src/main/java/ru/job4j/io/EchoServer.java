@@ -28,7 +28,7 @@ public class EchoServer {
                             close = true;
                         } else if (str.contains("?msg=Hello")) {
                             msgHello = "Hello";
-                        } else if (!str.contains("?msg=Hello") && !str.contains("?msg=Exit")) {
+                        } else {
                             msgOther = "What";
                         }
                         System.out.println(str);
