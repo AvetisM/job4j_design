@@ -6,11 +6,11 @@ import com.google.gson.GsonBuilder;
 import java.util.Arrays;
 
 public class Goods {
-    private String name;
-    private double price;
-    private Boolean pack;
-    private String[] stock;
-    private Specifications specifications;
+    private final String name;
+    private final double price;
+    private final Boolean pack;
+    private final String[] stock;
+    private final Specifications specifications;
 
     public Goods(String name, double price, Boolean pack, String[] stock,
                  Specifications specifications) {
