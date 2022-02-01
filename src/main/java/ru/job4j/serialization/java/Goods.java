@@ -68,23 +68,6 @@ public class Goods {
        final Specifications specifications = new Specifications(goods, "Grey", "M");
        goods.setSpecifications(specifications);
 
-        /*JAXBContext context = JAXBContext.newInstance(Goods.class);
-
-        Marshaller marshaller = context.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        String xml = "";
-        try (StringWriter writer = new StringWriter()) {
-            marshaller.marshal(goods, writer);
-            xml = writer.getBuffer().toString();
-            System.out.println(xml);
-        }
-
-        Unmarshaller unmarshaller = context.createUnmarshaller();
-        try (StringReader reader = new StringReader(xml)) {
-            Goods result = (Goods) unmarshaller.unmarshal(reader);
-            System.out.println(result);
-        }*/
-
         JSONObject jsonSpecifications = new JSONObject("{\"color\":\"Grey\",\"size\":\"M\"}");
 
         List<String> list = new ArrayList<>();

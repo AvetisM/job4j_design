@@ -1,0 +1,28 @@
+Критерии поиска: тип - mask; значение - .txt
+Список найденных файлов:
+c:\projects\job4j_design\.idea\checkstyleidea-libs\readme.txt
+c:\projects\job4j_design\data\botAnswers.txt
+c:\projects\job4j_design\log.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.AppTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.collection.ForwardLinkedTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.collection.list.SimpleLinkedListTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.collection.SimpleArrayListTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.collection.SimpleQueueTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.collection.SimpleStackTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.io.AnalizyTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.io.ArgsNameTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.io.ConfigTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.io.CSVReaderTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.it.BackwardArrayItTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.it.EvenNumbersIteratorTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.it.FlatMapTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.it.MatrixItTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.iterator.ListUtilsTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.map.SimpleMapTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.question.AnalysisTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.set.SimpleSetTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.tree.SimpleTreeTest.txt
+c:\projects\job4j_design\target\surefire-reports\ru.job4j.TriggerTest.txt
+c:\projects\job4j_design\дубли\duplicates\hello.txt
+c:\projects\job4j_design\дубли\duplicates2\hello.txt
+c:\projects\job4j_design\дубли\hello.txt
