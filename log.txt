@@ -1,5 +1,5 @@
-Критерии поиска: тип - mask; значение - .txt
-Список найденных файлов:
+РљСЂРёС‚РµСЂРёРё РїРѕРёСЃРєР°: С‚РёРї - mask; Р·РЅР°С‡РµРЅРёРµ - .txt
+РЎРїРёСЃРѕРє РЅР°Р№РґРµРЅРЅС‹С… С„Р°Р№Р»РѕРІ:
 c:\projects\job4j_design\.idea\checkstyleidea-libs\readme.txt
 c:\projects\job4j_design\data\botAnswers.txt
 c:\projects\job4j_design\log.txt
@@ -23,6 +23,6 @@ c:\projects\job4j_design\target\surefire-reports\ru.job4j.question.AnalysisTest.
 c:\projects\job4j_design\target\surefire-reports\ru.job4j.set.SimpleSetTest.txt
 c:\projects\job4j_design\target\surefire-reports\ru.job4j.tree.SimpleTreeTest.txt
 c:\projects\job4j_design\target\surefire-reports\ru.job4j.TriggerTest.txt
-c:\projects\job4j_design\дубли\duplicates\hello.txt
-c:\projects\job4j_design\дубли\duplicates2\hello.txt
-c:\projects\job4j_design\дубли\hello.txt
+c:\projects\job4j_design\РґСѓР±Р»Рё\duplicates\hello.txt
+c:\projects\job4j_design\РґСѓР±Р»Рё\duplicates2\hello.txt
+c:\projects\job4j_design\РґСѓР±Р»Рё\hello.txt

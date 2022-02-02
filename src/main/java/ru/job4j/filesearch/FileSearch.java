@@ -39,7 +39,8 @@ public class FileSearch {
                 sources = Search.search(Path.of(directory), p -> p.toFile().getName().endsWith(condition));
                 break;
             case "name":
-                sources = Search.search(Path.of(directory), p -> condition.equals(p.toFile().getName()));
+                Pattern namePattern = Pattern.compile("[a-z&&[" + condition + "]]");
+                sources = Search.search(Path.of(directory), p -> namePattern.matcher(p.toFile().getName()).matches());
                 break;
             case "regex":
                 Pattern pattern = Pattern.compile(condition);
