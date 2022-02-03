@@ -36,15 +36,19 @@ public class FileSearch {
 
         switch (conditionType) {
             case "mask":
-                sources = Search.search(Path.of(directory), p -> p.toFile().getName().endsWith(condition));
+                String mask = condition
+                        .replace(".", "\\.")
+                        .replace("*", "")
+                        .replace("?", ".");
+                Pattern namePattern = Pattern.compile(mask);
+                sources = Search.search(Path.of(directory), p -> namePattern.matcher(p.toFile().getName()).find());
                 break;
             case "name":
-                Pattern namePattern = Pattern.compile("[a-z&&[" + condition + "]]");
-                sources = Search.search(Path.of(directory), p -> namePattern.matcher(p.toFile().getName()).matches());
+                sources = Search.search(Path.of(directory), p -> condition.equals(p.toFile().getName()));
                 break;
             case "regex":
                 Pattern pattern = Pattern.compile(condition);
-                sources = Search.search(Path.of(directory), p -> pattern.matcher(p.toFile().getName()).matches());
+                sources = Search.search(Path.of(directory), p -> pattern.matcher(p.toFile().getName()).find());
                 break;
             default:
                 break;
