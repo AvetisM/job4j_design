@@ -1,1 +1,0 @@
-insert into students(name, age, specialty) values ('Ivanov Ivan', '18', 'dantist')

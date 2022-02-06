@@ -1,1 +1,0 @@
-update students set age = '21'
