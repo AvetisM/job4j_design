@@ -7,10 +7,6 @@ insert into rules(name) values('просмотр');
 insert into rules(name) values('редактирование');
 insert into rules(name) values('создание');
 
-insert into comments(name) values('выполнить');
-
-insert into attachs(value) values('описание задачи');
-
 insert into category(value) values('Важная');
 insert into category(value) values('Срочная');
 insert into category(value) values('Не срочная');
@@ -34,11 +30,11 @@ insert into role_and_rules (role_id, rules_id) values(4, 3);
 insert into item(name, users_id, category_id, state_id) values('Реализовать функционал 1', 1, 1, 2);
 insert into item(name, users_id, category_id, state_id) values('Протестировать задачу 1', 2, 3, 1);
 
-insert into item_attachs(item_id, attachs_id) values(1, 1);
-insert into item_attachs(item_id, attachs_id) values(2, 1);
+insert into comments(name, item_id) values('выполнить задачу 1', 1);
+insert into comments(name, item_id) values('выполнить задачу 2', 2);
 
-insert into item_comments(item_id, comments_id) values(1, 1);
-insert into item_comments(item_id, comments_id) values(2, 1);
+insert into attachs(value, item_id) values('описание задачи 1', 1);
+insert into attachs(value, item_id) values('описание задачи 2', 2);
 
 
 

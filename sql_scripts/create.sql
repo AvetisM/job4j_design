@@ -1,11 +1,9 @@
-Drop table IF EXISTS item_attachs;
-Drop table IF EXISTS item_comments;
+Drop table IF EXISTS comments;
+Drop table IF EXISTS attachs;
 Drop table IF EXISTS item;
 Drop table IF EXISTS role_and_rules;
 Drop table IF EXISTS users;
 Drop table IF EXISTS rules;
-Drop table IF EXISTS comments;
-Drop table IF EXISTS attachs;
 Drop table IF EXISTS category;
 Drop table IF EXISTS state;
 Drop table IF EXISTS role;
@@ -13,16 +11,6 @@ Drop table IF EXISTS role;
 create table rules (
 	id serial primary key,
 	name varchar(255)
-);
-
-create table comments (
-	id serial primary key,
-	name text
-);
-
-create table attachs (
-	id serial primary key,
-	value text
 );
 
 create table category (
@@ -61,16 +49,16 @@ create table item (
 	state_id int references state(id)
 );
 
-create table item_attachs (
+create table comments (
 	id serial primary key,
-	item_id int references item(id),
-	attachs_id int references attachs(id)
+	name text,
+	item_id int references item(id)
 );
 
-create table item_comments (
+create table attachs (
 	id serial primary key,
-	item_id int references item(id),
-	comments_id int references comments(id)
+	value text,
+	item_id int references item(id)
 );
 
 
