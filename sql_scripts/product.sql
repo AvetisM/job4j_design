@@ -47,9 +47,7 @@ Select
 	p.name,
 	p.price
 From product as p
-Order By 
-	p.price DESC
-limit 1;
+Where p.price = (Select max(pp.price) from product as pp);
 
 Select
 	t.name,
@@ -83,3 +81,5 @@ Select
 From product as p
 Inner Join type as t
 	On p.type_id = t.id;
+
+
