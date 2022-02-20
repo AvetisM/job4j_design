@@ -3,6 +3,7 @@ Drop table if exists body;
 Drop table if exists engine;
 Drop table if exists transmission;
 
+
 Create table body(
  id serial primary key,
  name varchar(255)
@@ -69,6 +70,6 @@ select
 	t_car.name
 from transmission as t_car
 	left join car as c
-	on t_car.id = c.engine_id
+	on t_car.id = c.transmission_id
 where c.id is null;
 	
