@@ -6,17 +6,17 @@ Create table teens(
 	gender char(3)
 );
 
-insert into teens (name, gender) values ('Катя', 'жен');
-insert into teens (name, gender) values ('Таня', 'жен');
-insert into teens (name, gender) values ('Аня', 'жен');
-insert into teens (name, gender) values ('Маша', 'жен');
-insert into teens (name, gender) values ('Лиза', 'жен');
-insert into teens (name, gender) values ('Яна', 'жен');
+insert into teens (name, gender) values ('РљР°С‚СЏ', 'Р¶РµРЅ');
+insert into teens (name, gender) values ('РўР°РЅСЏ', 'Р¶РµРЅ');
+insert into teens (name, gender) values ('РђРЅСЏ', 'Р¶РµРЅ');
+insert into teens (name, gender) values ('РњР°С€Р°', 'Р¶РµРЅ');
+insert into teens (name, gender) values ('Р›РёР·Р°', 'Р¶РµРЅ');
+insert into teens (name, gender) values ('РЇРЅР°', 'Р¶РµРЅ');
 
-insert into teens (name, gender) values ('Петя', 'муж');
-insert into teens (name, gender) values ('Коля', 'муж');
-insert into teens (name, gender) values ('Вася', 'муж');
-insert into teens (name, gender) values ('Ваня', 'муж');
+insert into teens (name, gender) values ('РџРµС‚СЏ', 'РјСѓР¶');
+insert into teens (name, gender) values ('РљРѕР»СЏ', 'РјСѓР¶');
+insert into teens (name, gender) values ('Р’Р°СЃСЏ', 'РјСѓР¶');
+insert into teens (name, gender) values ('Р’Р°РЅСЏ', 'РјСѓР¶');
 
 Select
 	t_male.name,
@@ -24,6 +24,6 @@ Select
 From
 	teens as t_male
 	Cross join teens as t_female
-Where t_male.gender = 'муж'
-	and t_female.gender = 'жен'
+Where t_male.gender = 'РјСѓР¶'
+	and t_female.gender = 'Р¶РµРЅ'
 		
