@@ -1,7 +1,6 @@
 package ru.job4j.jdbc;
 
-import ru.job4j.io.Config;
-
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -21,77 +20,61 @@ public class TableEditor implements AutoCloseable {
     }
 
     private void initConnection() {
-        Config config = new Config("app.properties");
-        config.load();
-        properties.put("driver_class", config.value("hibernate.connection.driver_class"));
-        properties.put("url", config.value("hibernate.connection.url"));
-        properties.put("username", config.value("hibernate.connection.username"));
-        properties.put("password", config.value("hibernate.connection.password"));
         try {
-            Class.forName(properties.get("driver_class").toString());
+            Class.forName(properties.getProperty("hibernate.connection.driver_class"));
             connection = DriverManager.getConnection(
-                    properties.get("url").toString(),
-                    properties.get("username").toString(),
-                    properties.get("password").toString());
+                    properties.getProperty("hibernate.connection.url"),
+                    properties.getProperty("hibernate.connection.username"),
+                    properties.getProperty("hibernate.connection.password"));
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }
 
     public void createTable(String tableName) throws SQLException {
-        try (Statement statement = connection.createStatement()) {
-            String sql = String.format(
-                    "create table if not exists %s()",
-                    tableName
-            );
-            statement.execute(sql);
-        }
+        String sql = String.format(
+                "create table if not exists %s()",
+                tableName
+        );
+        executeQuery(sql);
     }
 
     public void dropTable(String tableName) throws SQLException {
-        try (Statement statement = connection.createStatement()) {
-            String sql = String.format(
-                    "drop table if exists %s cascade",
-                    tableName
-            );
-            statement.execute(sql);
-        }
+        String sql = String.format(
+                "drop table if exists %s cascade",
+                tableName
+        );
+        executeQuery(sql);
     }
 
     public void addColumn(String tableName, String columnName, String type) throws SQLException {
-        try (Statement statement = connection.createStatement()) {
-            String sql = String.format(
-                    "alter table %s add column %s %s",
-                    tableName,
-                    columnName,
-                    type
-            );
-            statement.execute(sql);
-        }
+        String sql = String.format(
+                "alter table %s add column %s %s",
+                tableName,
+                columnName,
+                type
+        );
+        executeQuery(sql);
     }
 
     public void dropColumn(String tableName, String columnName) throws SQLException {
-        try (Statement statement = connection.createStatement()) {
-            String sql = String.format(
-                    "alter table %s drop column %s",
-                    tableName,
-                    columnName
-            );
-            statement.execute(sql);
-        }
+        String sql = String.format(
+                "alter table %s drop column %s",
+                tableName,
+                columnName
+        );
+        executeQuery(sql);
     }
 
     public void renameColumn(String tableName, String columnName, String newColumnName) throws SQLException {
-        try (Statement statement = connection.createStatement()) {
-            String sql = String.format(
-                    "alter table %s rename column %s to %s",
-                    tableName,
-                    columnName,
-                    newColumnName
+        String sql = String.format(
+                "alter table %s rename column %s to %s",
+                tableName,
+                columnName,
+                newColumnName
 
-            );
-            statement.execute(sql);
-        }
+        );
+        executeQuery(sql);
     }
 
     public static String getTableScheme(Connection connection, String tableName) throws Exception {
@@ -113,6 +96,12 @@ public class TableEditor implements AutoCloseable {
         return buffer.toString();
     }
 
+    public void executeQuery(String sql) throws SQLException {
+        try (Statement statement = connection.createStatement()) {
+            statement.execute(sql);
+        }
+    }
+
     @Override
     public void close() throws Exception {
         if (connection != null) {
@@ -121,20 +110,26 @@ public class TableEditor implements AutoCloseable {
     }
 
     public static void main(String[] args) throws Exception {
+
         Properties properties = new Properties();
-        TableEditor tableEditor = new TableEditor(properties);
+        try (FileInputStream fis = new FileInputStream("app.properties")) {
+            properties.load(fis);
+        }
 
-        tableEditor.dropTable("students");
+        try (TableEditor tableEditor = new TableEditor(properties)) {
 
-        tableEditor.createTable("students");
-        System.out.println(getTableScheme(tableEditor.connection, "students"));
-        tableEditor.addColumn("students", "name", "text");
-        System.out.println(getTableScheme(tableEditor.connection, "students"));
-        tableEditor.renameColumn("students", "name", "surname");
-        System.out.println(getTableScheme(tableEditor.connection, "students"));
-        tableEditor.dropColumn("students", "surname");
-        System.out.println(getTableScheme(tableEditor.connection, "students"));
+            tableEditor.dropTable("students");
 
-        tableEditor.dropTable("students");
+            tableEditor.createTable("students");
+            System.out.println(getTableScheme(tableEditor.connection, "students"));
+            tableEditor.addColumn("students", "name", "text");
+            System.out.println(getTableScheme(tableEditor.connection, "students"));
+            tableEditor.renameColumn("students", "name", "surname");
+            System.out.println(getTableScheme(tableEditor.connection, "students"));
+            tableEditor.dropColumn("students", "surname");
+            System.out.println(getTableScheme(tableEditor.connection, "students"));
+
+            tableEditor.dropTable("students");
+        }
     }
 }
