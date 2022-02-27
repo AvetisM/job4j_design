@@ -25,10 +25,15 @@ public class ImportDB {
             for (String line = rd.readLine(); line != null; line = rd.readLine()) {
                 String[] values = line.split(";");
                 if (values.length == 2) {
-                    User newUser = new User(values[0], values[1]);
+                    if (values[0].trim().isEmpty() || values[1].trim().isEmpty()) {
+                        continue;
+                    }
+                    User newUser = new User(values[0].trim(), values[1].trim());
                     users.add(newUser);
                 }
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return users;
     }
