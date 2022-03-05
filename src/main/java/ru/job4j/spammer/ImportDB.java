@@ -19,7 +19,7 @@ public class ImportDB {
         this.dump = dump;
     }
 
-    public List<User> load() throws IOException {
+    public List<User> load() {
         List<User> users = new ArrayList<>();
         try (BufferedReader rd = new BufferedReader(new FileReader(dump))) {
             for (String line = rd.readLine(); line != null; line = rd.readLine()) {
@@ -29,6 +29,8 @@ public class ImportDB {
                     users.add(newUser);
                 }
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return users;
     }
